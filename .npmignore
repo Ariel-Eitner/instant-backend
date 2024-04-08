@@ -1,0 +1,32 @@
+# Archivos de configuración
+*.json
+*.yml
+*.yaml
+/tsconfig.json
+/tsconfig.build.json
+/prettierrc
+/eslintrc
+/.gitattributes
+
+# Archivos de documentación y ejemplos
+/docs
+/examples
+
+# Archivos de tests y cobertura
+/tests
+/coverage
+/*.spec.ts
+/*.test.ts
+
+# Archivos del sistema y de editor
+.DS_Store
+Thumbs.db
+/.vscode
+/.idea
+/*.sublime-project
+/*.sublime-workspace
+
+# Archivos y directorios de desarrollo
+/src
+/scripts
+/config
