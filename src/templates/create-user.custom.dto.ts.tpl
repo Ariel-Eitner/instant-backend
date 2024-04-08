@@ -7,7 +7,6 @@ import {
   IsBoolean,
 } from 'class-validator';
 import { Type } from 'class-transformer';
-import '@ariel-eitner/instant-backend';
 import { CreateUserDto } from '@ariel-eitner/instant-backend';
 
 export class CreateUserCustomDto extends CreateUserDto {

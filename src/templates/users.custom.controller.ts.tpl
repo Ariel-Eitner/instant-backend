@@ -1,4 +1,4 @@
-import { UsersController } from '@ariel-eitner/instant-backend';
+import { UsersController } from "@ariel-eitner/instant-backend";
 import {
   Body,
   Controller,
@@ -10,10 +10,10 @@ import {
   Query,
   HttpCode,
   HttpStatus,
-} from '@nestjs/common';
-import { UsersCustomService } from './users.custom.service';
+} from "@nestjs/common";
+import { UsersCustomService } from "./users.custom.service";
 
-@Controller('users')
+@Controller("users")
 export class UsersCustomController extends UsersController {
   constructor(protected readonly userService: UsersCustomService) {
     super(userService);

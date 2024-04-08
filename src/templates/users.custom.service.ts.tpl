@@ -3,19 +3,16 @@ import {
   NotFoundException,
   HttpStatus,
   HttpException,
-} from '@nestjs/common';
-import { InjectModel } from '@nestjs/mongoose';
-import { Model } from 'mongoose';
-
-import { UserCustomBase, UserCustomDocument } from './user.custom.schema';
-import { CreateUserCustomDto } from './create-user.custom.dto';
-import { UpdateUserDto } from './update-user.custom.dto';
-import { UsersService } from '@ariel-eitner/instant-backend';
+} from "@nestjs/common";
+import { InjectModel } from "@nestjs/mongoose";
+import { Model } from "mongoose";
+import { UserCustomBase, UserCustomDocument } from "./user.custom.schema";
+import { UsersService } from "@ariel-eitner/instant-backend";
 
 @Injectable()
 export class UsersCustomService extends UsersService {
   constructor(
-    @InjectModel(UserCustomBase.name) userModel: Model<UserCustomDocument>,
+    @InjectModel(UserCustomBase.name) userModel: Model<UserCustomDocument>
   ) {
     super(userModel);
   }

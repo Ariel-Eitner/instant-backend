@@ -27,6 +27,6 @@ Thumbs.db
 /*.sublime-workspace
 
 # Archivos y directorios de desarrollo
-/src
+
 /scripts
 /config

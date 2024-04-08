@@ -13,7 +13,7 @@ import { UpdateUserDto } from "../dto/update-user.base.dto";
 @Injectable()
 export class UsersService {
   constructor(
-    @InjectModel(UserBase.name) private userModel: Model<UserBaseDocument>
+    @InjectModel(UserBase.name) protected userModel: Model<UserBaseDocument>
   ) {}
 
   async createUser(
