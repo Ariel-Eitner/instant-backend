@@ -1,0 +1,32 @@
+export interface IUser {
+  address?: string;
+  bio?: string;
+  birthDate?: Date;
+  company?: string;
+  createdAt?: Date;
+  email?: string;
+  facebookId?: string;
+  facebookUrl?: string;
+  firstName?: string;
+  gender?: string;
+  githubId?: string;
+  githubUrl?: string;
+  googleId?: string;
+  instagramHandle?: string;
+  isActive?: boolean;
+  language?: string;
+  lastName?: string;
+  linkedinId?: string;
+  linkedInUrl?: string;
+  microsoftId?: string;
+  middleName?: string;
+  occupation?: string;
+  password?: string;
+  phoneNumber?: string;
+  refreshToken?: string;
+  resetPasswordExpires?: Date;
+  resetPasswordToken?: string;
+  twitterHandle?: string;
+  updatedAt?: Date;
+  websiteUrl?: string;
+}

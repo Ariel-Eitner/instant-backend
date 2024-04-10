@@ -11,9 +11,9 @@ import {
   HttpStatus,
 } from "@nestjs/common";
 
-import { CreateUserDto } from "../dto/create-user.base.dto";
-import { UpdateUserDto } from "../dto/update-user.base.dto";
-import { UsersService } from "../services/users.base.service";
+import { CreateUserDto } from "./dto/create-user.base.dto";
+import { UpdateUserDto } from "./dto/update-user.base.dto";
+import { UsersService } from "./users.base.service";
 
 @Controller("users")
 export class UsersController {

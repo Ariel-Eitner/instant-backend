@@ -3,8 +3,9 @@ import {
   IsOptional,
   IsString,
   IsDate,
-  ValidateNested,
   IsBoolean,
+  ValidateIf,
+  IsNotEmpty,
 } from "class-validator";
 import { Type } from "class-transformer";
 
@@ -85,4 +86,42 @@ export class CreateUserDto {
   @IsBoolean()
   @IsOptional()
   isActive?: boolean;
+
+  @IsString()
+  @IsOptional()
+  googleId?: string;
+
+  @IsString()
+  @IsOptional()
+  facebookId?: string;
+
+  @IsString()
+  @IsOptional()
+  githubId?: string;
+
+  @IsString()
+  @IsOptional()
+  linkedinId?: string;
+
+  @IsString()
+  @IsOptional()
+  microsoftId?: string;
+
+  @IsString()
+  @IsOptional()
+  refreshToken?: string;
+
+  @IsDate()
+  @IsOptional()
+  @Type(() => Date)
+  resetPasswordExpires?: Date;
+
+  @IsString()
+  @IsOptional()
+  resetPasswordToken?: string;
+
+  @ValidateIf((o) => o.language !== undefined)
+  @IsNotEmpty()
+  @IsString()
+  language?: string;
 }

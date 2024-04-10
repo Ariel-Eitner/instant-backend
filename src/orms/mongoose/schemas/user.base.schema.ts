@@ -1,5 +1,5 @@
 import { Prop, Schema, SchemaFactory } from "@nestjs/mongoose";
-import { Document, Types } from "mongoose";
+import { Document } from "mongoose";
 
 @Schema()
 export class UserBase {
@@ -58,7 +58,34 @@ export class UserBase {
   @Prop({ unique: true, sparse: true })
   instagramHandle?: string;
 
-  // Others
+  // Additional fields based on extended interface
+  @Prop({ unique: true, sparse: true, lowercase: true })
+  facebookId?: string;
+
+  @Prop({ unique: true, sparse: true, lowercase: true })
+  githubId?: string;
+
+  @Prop({ unique: true, sparse: true, lowercase: true })
+  googleId?: string;
+
+  @Prop({ unique: true, sparse: true, lowercase: true })
+  linkedinId?: string;
+
+  @Prop({ unique: true, sparse: true, lowercase: true })
+  microsoftId?: string;
+
+  @Prop()
+  refreshToken?: string;
+
+  @Prop()
+  resetPasswordToken?: string;
+
+  @Prop()
+  resetPasswordExpires?: Date;
+
+  @Prop()
+  language?: string;
+
   @Prop()
   bio?: string;
 
@@ -70,8 +97,6 @@ export class UserBase {
 
   @Prop({ default: Date.now })
   updatedAt?: Date;
-
-  // Aquí puedes añadir más campos según sea necesario
 }
 
 export type UserBaseDocument = UserBase & Document;
