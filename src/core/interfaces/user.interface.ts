@@ -34,6 +34,7 @@ export interface IUser {
   refreshToken?: string;
   resetPasswordExpires?: Date;
   resetPasswordToken?: string;
+  role?: string;
   ssn?: string;
   taxId?: string;
   twitterHandle?: string;

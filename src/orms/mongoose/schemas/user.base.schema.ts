@@ -1,5 +1,6 @@
 import { Prop, Schema, SchemaFactory } from "@nestjs/mongoose";
 import { Document } from "mongoose";
+import { roles } from "../../../core/utils/roles";
 
 @Schema()
 export class UserBase {
@@ -107,6 +108,9 @@ export class UserBase {
 
   @Prop()
   resetPasswordToken?: string;
+
+  @Prop({ enum: roles })
+  role?: string;
 
   @Prop({ unique: true, sparse: true, lowercase: true })
   ssn?: string;

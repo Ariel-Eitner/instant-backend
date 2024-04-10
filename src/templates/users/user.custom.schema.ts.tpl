@@ -1,4 +1,4 @@
-import { UserBase } from '@ariel-eitner/instant-backend';
+import { UserBase, roles } from '@ariel-eitner/instant-backend';
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import { Document } from 'mongoose';
 
@@ -108,6 +108,9 @@ export class UserCustomBase extends UserBase {
 
   //@Prop({ required: false })
   //resetPasswordToken?: string;
+
+  //@Prop({ enum: roles, required: false })
+  //role?: string;
 
   //@Prop({ unique: true, sparse: true, lowercase: true, required: false})
   //ssn?: string;

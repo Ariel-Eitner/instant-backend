@@ -11,6 +11,8 @@ export * from "./src/modules/users/users.base.service";
 // Exportar Controladores Base
 export * from "./src/modules/users/users.base.controller";
 
+export * from "./src/core/utils/roles";
+
 // Opcionalmente, si decides incluir las versiones personalizadas en tu paquete, puedes descomentar estas líneas:
 // export * from "./src/dto/create-user.custom.dto";
 // export * from "./src/schemas/user.custom.schema";
