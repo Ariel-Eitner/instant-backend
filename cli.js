@@ -12,7 +12,13 @@ const generateFiles = (fileMap, srcDir) => {
   }
 
   Object.entries(fileMap).forEach(([template, destination]) => {
-    const templatePath = path.join(__dirname, "src", "templates", template);
+    const templatePath = path.join(
+      __dirname,
+      "src",
+      "templates",
+      "users",
+      template
+    );
     const destinationPath = path.join(srcDir, destination);
 
     try {

@@ -4,55 +4,72 @@ import { Document } from 'mongoose';
 
 @Schema({ collection: 'users' })
 export class UserCustomBase extends UserBase {
-  //@Prop({ unique: false, sparse: false, lowercase: false, required: false })
+  //@Prop({ unique: true, sparse: true, lowercase: true })
   //email?: string;
-  //@Prop({ required: false })
+  //@Prop()
   //password?: string;
   // Basic user information
-  //@Prop({ required: false })
+  //@Prop()
   //firstName?: string;
-  //@Prop({ required: false })
+  //@Prop()
   //lastName?: string;
-  //@Prop({ required: false })
+  //@Prop()
   //middleName?: string;
-  //@Prop({ required: false })
+  //@Prop()
   //gender?: string;
-  //@Prop({ required: false })
+  //@Prop()
   //birthDate?: Date;
   // Contact Details
-  //@Prop({ unique: false, sparse: false, required: false })
+  //@Prop({ unique: true, sparse: true })
   //phoneNumber?: string;
-  //@Prop({ required: false })
+  //@Prop()
   //address?: string;
   // Professional information
-  //@Prop({ required: false })
+  //@Prop()
   //occupation?: string;
-  //@Prop({ required: false })
+  //@Prop()
   //company?: string;
   // Social Media
-  //@Prop({ unique: false, sparse: false, required: false })
+  //@Prop({ unique: true, sparse: true })
   //githubUrl?: string;
-  //@Prop({ unique: false, sparse: false, required: false })
+  //@Prop({ unique: true, sparse: true })
   //websiteUrl?: string;
-  //@Prop({ unique: false, sparse: false, required: false })
+  //@Prop({ unique: true, sparse: true })
   //twitterHandle?: string;
-  //@Prop({ unique: false, sparse: false, required: false })
+  //@Prop({ unique: true, sparse: true })
   //facebookUrl?: string;
-  //@Prop({ unique: false, sparse: false, required: false })
+  //@Prop({ unique: true, sparse: true })
   //linkedInUrl?: string;
-  //@Prop({ unique: false, sparse: false, required: false })
+  //@Prop({ unique: true, sparse: true })
   //instagramHandle?: string;
   // Others
-  //@Prop({ required: false })
+  //@Prop()
   //bio?: string;
-  //@Prop({ default: true, required: false })
+  //@Prop({ default: true })
   //isActive?: boolean;
-  //@Prop({ default: Date.now, required: false })
+  //@Prop({ default: Date.now })
   //createdAt?: Date;
-  //@Prop({ default: Date.now, required: false })
+  //@Prop({ default: Date.now })
   //updatedAt?: Date;
+  // Authentication-related fields
+  //@Prop({ unique: true, sparse: true })
+  //googleId?: string;
+  //@Prop({ unique: true, sparse: true })
+  //facebookId?: string;
+  //@Prop({ unique: true, sparse: true })
+  //microsoftId?: string;
+  //@Prop({ unique: true, sparse: true })
+  //linkedinId?: string;
+  //@Prop({ unique: true, sparse: true })
+  //githubId?: string;
+  //@Prop()
+  //refreshToken?: string;
+  //@Prop()
+  //resetPasswordToken?: string;
+  //@Prop()
+  //resetPasswordExpires?: Date;
   // Example additional field
-  //@Prop({ required: false })
+  //@Prop()
   //hobby?: string;
 }
 

@@ -68,15 +68,32 @@ export class CreateUserCustomDto extends CreateUserDto {
   //@IsBoolean()
   //@IsOptional()
   //isActive?: boolean;
-  //@IsOptional()
-  //@Type(() => Date)
-  //createdAt?: Date;
-  //@IsOptional()
-  //@Type(() => Date)
-  //updatedAt?: Date;
-  //Agrega campos personalizados aquí
-  //Ejemplo:
   //@IsString()
   //@IsOptional()
-  //hobby?: string;
+  //googleId?: string;
+  //@IsString()
+  //@IsOptional()
+  //facebookId?: string;
+  //@IsString()
+  //@IsOptional()
+  //microsoftId?: string;
+  //@IsString()
+  //@IsOptional()
+  //linkedinId?: string;
+  //@IsString()
+  //@IsOptional()
+  //githubId?: string;
+  //@IsString()
+  //@IsOptional()
+  //refreshToken?: string;
+  //@IsString()
+  //@IsOptional()
+  //resetPasswordToken?: string;
+  //@IsDate()
+  //@IsOptional()
+  //@Type(() => Date)
+  //resetPasswordExpires?: Date;
+  //@IsString()
+  //@IsOptional()
+  //language?: string;
 }

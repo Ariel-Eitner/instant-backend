@@ -1,4 +1,3 @@
-import { UsersController } from "@ariel-eitner/instant-backend";
 import {
   Body,
   Controller,
@@ -10,48 +9,50 @@ import {
   Query,
   HttpCode,
   HttpStatus,
-} from "@nestjs/common";
-import { UsersCustomService } from "./users.custom.service";
+} from '@nestjs/common';
+import { UsersService } from './users.custom.service';
+import { CreateUserCustomDto } from './create-user.custom.dto';
+import { UpdateUserDto } from './update-user.custom.dto';
 
-@Controller("users")
-export class UsersCustomController extends UsersController {
-  constructor(protected readonly userService: UsersCustomService) {
-    super(userService);
+@Controller('users')
+export class UsersController {
+  constructor(protected readonly userService: UsersService) {}
+
+  @Post()
+  async createUser(@Body() createUserDto: CreateUserCustomDto) {
+    return this.userService.createUser(createUserDto);
   }
 
-  // @Post()
-  // async createUser(@Body() createUserDto: CreateUserCustomDto) {
-  //   return super.createUser(createUserDto);
-  // }
+  @Get()
+  async findAllUsers() {
+    return this.userService.findAllUsers();
+  }
 
-  // @Get()
-  // async findAllUsers() {
-  //   return super.findAllUsers();
-  // }
+  @Get(':id')
+  async findUserById(@Param('id') id: string) {
+    return this.userService.findUserById(id);
+  }
 
-  // @Get(':id')
-  // async findUserById(@Param('id') id: string) {
-  //   return super.findUserById(id);
-  // }
+  @Get('email/:email')
+  async findUserByEmail(@Param('email') email: string) {
+    return this.userService.findUserByEmail(email);
+  }
 
-  // @Get('email/:email')
-  // async findUserByEmail(@Param('email') email: string) {
-  //   return super.findUserByEmail(email);
-  // }
+  @Put(':id')
+  async updateUser(
+    @Param('id') id: string,
+    @Body() updateUserDto: UpdateUserDto,
+  ) {
+    return this.userService.updateUser(id, updateUserDto);
+  }
 
-  // @Put(':id')
-  // async updateUser(@Param('id') id: string, @Body() updateUserDto: UpdateUserDto) {
-  //   return super.updateUser(id, updateUserDto);
-  // }
+  @Delete(':id')
+  async deleteUser(@Param('id') id: string) {
+    return this.userService.deleteUser(id);
+  }
 
-  // @Delete(':id')
-  // @HttpCode(HttpStatus.NO_CONTENT)
-  // async deleteUser(@Param('id') id: string) {
-  //   return super.deleteUser(id);
-  // }
-
-  // @Get('search')
-  // async findUsers(@Query() query: Record<string, any>) {
-  //   return super.findUsers(query);
-  // }
+  @Get('search')
+  async findUsers(@Query() query: Record<string, any>) {
+    return this.userService.findUsers(query);
+  }
 }
