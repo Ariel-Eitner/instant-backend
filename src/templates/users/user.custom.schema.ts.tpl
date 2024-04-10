@@ -4,103 +4,125 @@ import { Document } from 'mongoose';
 
 @Schema({ collection: 'users' })
 export class UserCustomBase extends UserBase {
-  //@Prop({ unique: true, sparse: true, lowercase: true, required: false }) 
-  //email?: string;
-  
-  //@Prop({ required: false })
-  //password?: string;
-  
-  // Basic user information
-  //@Prop({ required: false })
-  //firstName?: string;
-  
-  //@Prop({ required: false })
-  //lastName?: string;
-  
-  //@Prop({ required: false })
-  //middleName?: string;
-  
-  //@Prop({ required: false })
-  //gender?: string;
-  
-  //@Prop({ required: false })
-  //birthDate?: Date;
-  
-  // Contact Details
-  //@Prop({ unique: true, sparse: true, required: false }) 
-  //phoneNumber?: string;
-  
   //@Prop({ required: false })
   //address?: string;
-  
-  // Professional information
+
   //@Prop({ required: false })
-  //occupation?: string;
-  
+  //bio?: string;
+
+  //@Prop({ required: false })
+  //birthDate?: Date;
+
   //@Prop({ required: false })
   //company?: string;
 
   //@Prop({ required: false })
   //country?: string;
 
-
-  
-  // Social Media
-  //@Prop({ unique: true, sparse: true, required: false }) 
-  //githubUrl?: string;
-  
-  //@Prop({ unique: true, sparse: true, required: false }) 
-  //websiteUrl?: string;
-  
-  //@Prop({ unique: true, sparse: true, required: false }) 
-  //twitterHandle?: string;
-  
-  //@Prop({ unique: true, sparse: true, required: false }) 
-  //facebookUrl?: string;
-  
-  //@Prop({ unique: true, sparse: true, required: false })
-  //linkedInUrl?: string;
-  
-  //@Prop({ unique: true, sparse: true, required: false }) 
-  //instagramHandle?: string;
-  
-  // Others
-  //@Prop({ required: false })
-  //bio?: string;
-  
-  //@Prop({ default: true, required: false })
-  //isActive?: boolean;
-  
   //@Prop({ default: Date.now, required: false })
   //createdAt?: Date;
-  
-  //@Prop({ default: Date.now, required: false })
-  //updatedAt?: Date;
-  
-  // Authentication-related fields
-  //@Prop({ unique: true, sparse: true, required: false })
-  //googleId?: string;
-  
+
+  //@Prop({ unique: true, sparse: true, lowercase: true ,required: false})
+  //cuit?: string;
+
+  //@Prop({ unique: true, sparse: true, lowercase: true ,required: false})
+  //dni?: string;
+
+  //@Prop({ unique: true, sparse: true, lowercase: true ,required: false})
+  //driverLicenseNumber?: string;
+
+  //@Prop({ unique: true, sparse: true, lowercase: true, required: false }) 
+  //email?: string;
+
+  //@Prop({required: false})
+  //employmentStatus?: string;
+
   //@Prop({ unique: true, sparse: true, required: false })
   //facebookId?: string;
   
+  //@Prop({ unique: true, sparse: true, required: false }) 
+  //facebookUrl?: string;
+
+  //@Prop({ required: false })
+  //firstName?: string;
+
+  //@Prop({ required: false })
+  //gender?: string;
+
+  //@Prop({ unique: true, sparse: true, required: false }) 
+  //githubId?: string;
+
+  //@Prop({ unique: true, sparse: true, required: false }) 
+  //githubUrl?: string;
+
+  //@Prop({ unique: true, sparse: true, required: false })
+  //googleId?: string;
+
+  //@Prop({ unique: true, sparse: true, required: false }) 
+  //instagramHandle?: string;
+
+  //@Prop({ default: true, required: false })
+  //isActive?: boolean;
+
+  //@Prop({required: false})
+  //language?: string;
+
+  //@Prop({ required: false })
+  //lastName?: string;
+
+  //@Prop({ unique: true, sparse: true, required: false })
+  //linkedInId?: string;
+
+  //@Prop({ unique: true, sparse: true, required: false })
+  //linkedInUrl?: string;
+
+  //@Prop({required: false})
+  //maritalStatus?: string;
+
   //@Prop({ unique: true, sparse: true, required: false })
   //microsoftId?: string;
-  
-  //@Prop({ unique: true, sparse: true, required: false })
-  //linkedinId?: string;
-  
-  //@Prop({ unique: true, sparse: true, required: false })
-  //githubId?: string;
-  
+
+  //@Prop({ required: false })
+  //middleName?: string;
+
+  //@Prop({required: false})
+  //nationality?: string;
+
+  //@Prop({ required: false })
+  //occupation?: string;
+
+  //@Prop({ unique: true, sparse: true, lowercase: true, required: false})
+  //passportNumber?: string;
+
+  //@Prop({ required: false })
+  //password?: string;
+
+  //@Prop({ unique: true, sparse: true, required: false }) 
+  //phoneNumber?: string;
+
   //@Prop({ required: false })
   //refreshToken?: string;
-  
-  //@Prop({ required: false })
-  //resetPasswordToken?: string;
-  
+
   //@Prop({ required: false })
   //resetPasswordExpires?: Date;
+
+  //@Prop({ required: false })
+  //resetPasswordToken?: string;
+
+  //@Prop({ unique: true, sparse: true, lowercase: true, required: false})
+  //ssn?: string;
+  
+  //@Prop({ unique: true, sparse: true, lowercase: true, required: false})
+  //taxId?: string;
+  
+  //@Prop({ unique: true, sparse: true, required: false }) 
+  //twitterHandle?: string; 
+
+  //@Prop({ default: Date.now, required: false })
+  //updatedAt?: Date;
+  
+  //@Prop({ unique: true, sparse: true, required: false }) 
+  //websiteUrl?: string;
   
   // Example additional field
   //@Prop({ required: false })
@@ -108,9 +130,6 @@ export class UserCustomBase extends UserBase {
 }
 
 export type UserCustomDocument = UserCustomBase & Document;
-
-
-
 
 const UserCustomSchema = SchemaFactory.createForClass(UserCustomBase);
 

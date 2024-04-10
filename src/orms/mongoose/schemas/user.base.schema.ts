@@ -21,13 +21,13 @@ export class UserBase {
   @Prop({ default: Date.now })
   createdAt?: Date;
 
-  @Prop()
+  @Prop({ unique: true, sparse: true, lowercase: true })
   cuit?: string;
 
-  @Prop()
+  @Prop({ unique: true, sparse: true, lowercase: true })
   dni?: string;
 
-  @Prop()
+  @Prop({ unique: true, sparse: true, lowercase: true })
   driverLicenseNumber?: string;
 
   @Prop({ unique: true, sparse: true, lowercase: true })
@@ -90,7 +90,7 @@ export class UserBase {
   @Prop()
   occupation?: string;
 
-  @Prop()
+  @Prop({ unique: true, sparse: true, lowercase: true })
   passportNumber?: string;
 
   @Prop()
@@ -108,10 +108,10 @@ export class UserBase {
   @Prop()
   resetPasswordToken?: string;
 
-  @Prop()
+  @Prop({ unique: true, sparse: true, lowercase: true })
   ssn?: string;
 
-  @Prop()
+  @Prop({ unique: true, sparse: true, lowercase: true })
   taxId?: string;
 
   @Prop({ unique: true, sparse: true })
@@ -128,7 +128,6 @@ export type UserBaseDocument = UserBase & Document;
 
 const UserBaseSchema = SchemaFactory.createForClass(UserBase);
 
-// Middleware para manejar createdAt y updatedAt
 UserBaseSchema.pre("save", function (next) {
   if (this.isNew) {
     this.createdAt = new Date();
