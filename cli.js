@@ -31,7 +31,7 @@ const generateFiles = (fileMap, srcDir) => {
           " " +
           chalk.blue(destination) +
           " " +
-          chalk.green("successfully.")
+          chalk.green("file successfully.")
       );
     } catch (error) {
       // Los mensajes de error se pueden mostrar en rojo, por ejemplo
