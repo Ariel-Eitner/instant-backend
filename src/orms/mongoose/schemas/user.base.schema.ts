@@ -89,6 +89,9 @@ export class UserBase {
   @Prop()
   bio?: string;
 
+  @Prop()
+  country?: string;
+
   @Prop({ default: true })
   isActive?: boolean;
 
@@ -101,4 +104,19 @@ export class UserBase {
 
 export type UserBaseDocument = UserBase & Document;
 
-export const UserBaseSchema = SchemaFactory.createForClass(UserBase);
+const UserBaseSchema = SchemaFactory.createForClass(UserBase);
+
+// Middleware para manejar createdAt y updatedAt
+UserBaseSchema.pre("save", function (next) {
+  if (this.isNew) {
+    this.createdAt = new Date();
+  }
+  next();
+});
+
+UserBaseSchema.pre("findOneAndUpdate", function (next) {
+  this.set({ updatedAt: new Date() });
+  next();
+});
+
+export { UserBaseSchema };

@@ -4,6 +4,7 @@ export interface IUser {
   birthDate?: Date;
   company?: string;
   createdAt?: Date;
+  country?: string;
   email?: string;
   facebookId?: string;
   facebookUrl?: string;

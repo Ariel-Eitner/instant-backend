@@ -27,6 +27,9 @@ export class CreateUserCustomDto extends CreateUserDto {
   //middleName?: string;
   //@IsString()
   //@IsOptional()
+  //country?: string;
+  //@IsString()
+  //@IsOptional()
   //gender?: string;
   //@IsDate()
   //@IsOptional()

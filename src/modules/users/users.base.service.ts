@@ -21,7 +21,7 @@ export class UsersService {
 
   async createUser(
     createUserDto: CreateUserDto
-  ): Promise<{ user: UserBase; message: string }> {
+  ): Promise<{ user?: UserBase; message: string }> {
     try {
       const existingUser = await this.userModel
         .findOne({ email: createUserDto.email.toLowerCase() })

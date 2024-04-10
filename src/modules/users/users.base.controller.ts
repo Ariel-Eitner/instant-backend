@@ -28,6 +28,10 @@ export class UsersController {
   async findAllUsers() {
     return this.userService.findAllUsers();
   }
+  @Get("search")
+  async findUsers(@Query() query: Record<string, any>) {
+    return this.userService.findUsers(query);
+  }
 
   @Get(":id")
   async findUserById(@Param("id") id: string) {
@@ -48,13 +52,7 @@ export class UsersController {
   }
 
   @Delete(":id")
-  @HttpCode(HttpStatus.NO_CONTENT)
   async deleteUser(@Param("id") id: string) {
     return this.userService.deleteUser(id);
-  }
-
-  @Get("search")
-  async findUsers(@Query() query: Record<string, any>) {
-    return this.userService.findUsers(query);
   }
 }
