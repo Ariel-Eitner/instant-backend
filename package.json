@@ -1,6 +1,6 @@
 {
   "name": "@ariel-eitner/instant-backend",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "instant-backend is a solution for creating super fast endpoints",
   "main": "dist/index.js",
   "bin": {

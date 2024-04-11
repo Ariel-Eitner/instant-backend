@@ -2,6 +2,10 @@
 
 instant-backend es una solución para crear endpoints super rápidos, con datos normalizados y seguros.
 
+## Changelog
+
+Para ver los cambios y actualizaciones de cada versión, consulta el [Changelog](./CHANGELOG.md).
+
 ## Características
 
 - Esquema perfecto para utilizar con NestJs.
