@@ -63,7 +63,6 @@ export class UsersService {
         );
       }
 
-      // Para otros errores no capturados específicamente, lanzar como error del servidor
       throw new HttpException(
         'An unexpected error occurred',
         HttpStatus.INTERNAL_SERVER_ERROR,
@@ -74,7 +73,7 @@ export class UsersService {
   async findAllUsers(): Promise<{ users?: UserCustomBase[]; message: string }> {
     const users = await this.userModel.find().exec();
     if (users.length === 0) {
-      return { message: 'No users found' };
+      throw new NotFoundException('No users found');
     }
     return { users, message: 'Users found successfully.' };
   }
@@ -124,10 +123,10 @@ export class UsersService {
 
   async findUsers(
     query: Record<string, any>,
-  ): Promise<{ users?: UserCustomBase[]; message: string }> {
+  ): Promise<{ users: UserCustomBase[]; message: string }> {
     const users = await this.userModel.find(query).exec();
     if (users.length === 0) {
-      return { message: 'No users found with the given query.' };
+      throw new NotFoundException('No users found with the given query.');
     }
     return { users, message: 'Users found successfully with given query.' };
   }

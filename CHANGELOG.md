@@ -16,3 +16,9 @@ y este proyecto adhiere a [Semantic Versioning](https://semver.org/spec/v2.0.0.h
   - `licenseNumber`: Número de licencia profesional.
 
 Estos cambios tienen como objetivo permitir una representación más completa del perfil del usuario, reduciendo la necesidad de colecciones adicionales para almacenar esta información. Se espera que estos campos faciliten la gestión de usuarios en aplicaciones que requieran detalles profesionales detallados.
+
+## [0.1.3] - 2024-04-11
+
+### Fixed
+
+- Se acomodaron los archivos con los nuevos props, ya que estaba fallando

@@ -37,11 +37,17 @@ export class UserCustomBase extends UserBase {
   //@Prop({required: false})
   //employmentStatus?: string;
 
+  //@Prop({ required: false })
+  //experience?: string;
+
   //@Prop({ unique: true, sparse: true, required: false })
   //facebookId?: string;
   
   //@Prop({ unique: true, sparse: true, required: false }) 
   //facebookUrl?: string;
+
+  //@Prop({ required: false })
+  //field?: string;
 
   //@Prop({ required: false })
   //firstName?: string;
@@ -58,6 +64,9 @@ export class UserCustomBase extends UserBase {
   //@Prop({ unique: true, sparse: true, required: false })
   //googleId?: string;
 
+  //@Prop({ required: false })
+  //industry?: string;
+
   //@Prop({ unique: true, sparse: true, required: false }) 
   //instagramHandle?: string;
 
@@ -69,6 +78,9 @@ export class UserCustomBase extends UserBase {
 
   //@Prop({ required: false })
   //lastName?: string;
+
+  //@Prop({ required: false })
+  //licenseNumber?: string;
 
   //@Prop({ unique: true, sparse: true, required: false })
   //linkedInId?: string;
@@ -127,14 +139,10 @@ export class UserCustomBase extends UserBase {
   //@Prop({ unique: true, sparse: true, required: false }) 
   //websiteUrl?: string;
 
-  //@Prop({ required: false })
-  //field?: string;
-  //@Prop({ required: false })
-  //industry?: string;
-  //@Prop({ required: false })
-  //experience?: string;
-  //@Prop({ required: false })
-  //licenseNumber?: string;
+
+
+
+
   
   // Example additional field
   //@Prop({ required: false })
