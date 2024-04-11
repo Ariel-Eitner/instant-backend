@@ -45,7 +45,6 @@ export class UsersService {
         );
       }
 
-      // Manejo de errores de validación de Mongoose (como se explicó anteriormente)
       if (
         typeof error === 'object' &&
         error !== null &&
@@ -72,8 +71,11 @@ export class UsersService {
     }
   }
 
-  async findAllUsers(): Promise<{ users: UserCustomBase[]; message: string }> {
+  async findAllUsers(): Promise<{ users?: UserCustomBase[]; message: string }> {
     const users = await this.userModel.find().exec();
+    if (users.length === 0) {
+      return { message: 'No users found' };
+    }
     return { users, message: 'Users found successfully.' };
   }
 
@@ -122,8 +124,11 @@ export class UsersService {
 
   async findUsers(
     query: Record<string, any>,
-  ): Promise<{ users: UserCustomBase[]; message: string }> {
+  ): Promise<{ users?: UserCustomBase[]; message: string }> {
     const users = await this.userModel.find(query).exec();
+    if (users.length === 0) {
+      return { message: 'No users found with the given query.' };
+    }
     return { users, message: 'Users found successfully with given query.' };
   }
 }

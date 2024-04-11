@@ -17,6 +17,7 @@ export const roles = [
   "moderator",
   "owner",
   "partner",
+  "professional",
   "provider",
   "stakeholder",
   "subscriber",
