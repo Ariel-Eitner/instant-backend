@@ -1,7 +1,5 @@
 # @ariel-eitner/instant-backend
 
-<!-- instant-backend is a solution for creating super fast endpoints, with normalized and secured data -->
-
 instant-backend es una solución para crear endpoints super rápidos, con datos normalizados y seguros.
 
 ## Características

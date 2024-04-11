@@ -126,6 +126,15 @@ export class UserCustomBase extends UserBase {
   
   //@Prop({ unique: true, sparse: true, required: false }) 
   //websiteUrl?: string;
+
+  //@Prop({ required: false })
+  //field?: string;
+  //@Prop({ required: false })
+  //industry?: string;
+  //@Prop({ required: false })
+  //experience?: string;
+  //@Prop({ required: false })
+  //licenseNumber?: string;
   
   // Example additional field
   //@Prop({ required: false })

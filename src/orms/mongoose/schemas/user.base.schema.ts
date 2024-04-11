@@ -37,11 +37,17 @@ export class UserBase {
   @Prop()
   employmentStatus?: string;
 
+  @Prop()
+  experience?: string;
+
   @Prop({ unique: true, sparse: true, lowercase: true })
   facebookId?: string;
 
   @Prop({ unique: true, sparse: true })
   facebookUrl?: string;
+
+  @Prop()
+  field?: string;
 
   @Prop()
   firstName?: string;
@@ -58,6 +64,9 @@ export class UserBase {
   @Prop({ unique: true, sparse: true, lowercase: true })
   googleId?: string;
 
+  @Prop()
+  industry?: string;
+
   @Prop({ unique: true, sparse: true })
   instagramHandle?: string;
 
@@ -69,6 +78,9 @@ export class UserBase {
 
   @Prop()
   lastName?: string;
+
+  @Prop()
+  licenseNumber?: string;
 
   @Prop({ unique: true, sparse: true, lowercase: true })
   linkedinId?: string;

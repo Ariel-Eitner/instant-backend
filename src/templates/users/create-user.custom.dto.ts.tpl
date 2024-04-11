@@ -49,7 +49,11 @@ export class CreateUserCustomDto extends CreateUserDto {
 
   //@IsEmail()
   //@IsOptional()
-  //emplymentStatus?: string;
+  //employmentStatus?: string;
+
+  //@IsString()
+  //@IsOptional()
+  //experience?: string;
 
   //@IsString()
   //@IsOptional()
@@ -58,6 +62,10 @@ export class CreateUserCustomDto extends CreateUserDto {
   //@IsString()
   //@IsOptional()
   //facebookUrl?: string;
+
+  //@IsString()
+  //@IsOptional()
+  //field?: string;
 
   //@IsString()
   //@IsOptional()
@@ -81,6 +89,10 @@ export class CreateUserCustomDto extends CreateUserDto {
 
   //@IsString()
   //@IsOptional()
+  //industry?: string;
+
+  //@IsString()
+  //@IsOptional()
   //instagramHandle?: string;
 
   //@IsBoolean()
@@ -95,6 +107,10 @@ export class CreateUserCustomDto extends CreateUserDto {
   //@IsString()
   //@IsOptional()
   //lastName?: string;
+
+  //@IsString()
+  //@IsOptional()
+  //licenseNumber?: string;
 
   //@IsString()
   //@IsOptional()
@@ -168,4 +184,5 @@ export class CreateUserCustomDto extends CreateUserDto {
   //@IsString()
   //@IsOptional()
   //websiteUrl?: string;
+
 }
