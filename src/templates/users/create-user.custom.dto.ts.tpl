@@ -171,7 +171,15 @@ export class CreateUserCustomDto extends CreateUserDto {
 
   //@IsString()
   //@IsOptional()
+  //specialty?: string;
+
+  //@IsString()
+  //@IsOptional()
   //ssn?: string;
+
+  //@IsString()
+  //@IsOptional()
+  //studies?: string;
 
   //@IsString()
   //@IsOptional()

@@ -1,7 +1,6 @@
-arreglar el custom schema que quedo raro, mal ordenado
-
 para instant ffrontend tengo que crear la interfaz iuser para que tenga todos los campos disuponibles
 
-al servicio usuarios ponerle status http not found em vez de solo, retornar un mensaje, para que salga el error 404
+en el cli tambien generar imports para el populate y mongose for root
 
-acomodar todos los archivos porque no aparecen en la version 0.1.3
+crear un script que traduzca una interfaz en todas las partes necesarias, para que unicamente
+al implemenetar una interfaz, se cree todo el modelo necesario

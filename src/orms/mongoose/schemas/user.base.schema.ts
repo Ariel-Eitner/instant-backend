@@ -124,8 +124,14 @@ export class UserBase {
   @Prop({ enum: roles })
   role?: string;
 
+  @Prop()
+  specialty?: string;
+
   @Prop({ unique: true, sparse: true, lowercase: true })
   ssn?: string;
+
+  @Prop()
+  studies?: string;
 
   @Prop({ unique: true, sparse: true, lowercase: true })
   taxId?: string;

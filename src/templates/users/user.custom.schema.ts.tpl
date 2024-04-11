@@ -124,8 +124,14 @@ export class UserCustomBase extends UserBase {
   //@Prop({ enum: roles, required: false })
   //role?: string;
 
-  //@Prop({ unique: true, sparse: true, lowercase: true, required: false})
-  //ssn?: string;
+ @Prop({required: false})
+  specialty?: string;
+
+  @Prop({ unique: true, sparse: true, lowercase: true })
+  ssn?: string;
+
+  @Prop({required: false})
+  studies?: string;
   
   //@Prop({ unique: true, sparse: true, lowercase: true, required: false})
   //taxId?: string;
