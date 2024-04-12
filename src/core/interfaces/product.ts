@@ -1,0 +1,33 @@
+export interface IProduct {
+  averageRating?: number;
+  brand?: string;
+  category?: string;
+  colors?: string[];
+  createdAt?: Date;
+  currency?: string;
+  depth?: number;
+  description?: string;
+  discountPrice?: number;
+  height?: number;
+  id?: string;
+  images?: string[];
+  isActive?: boolean;
+  mainImage?: string;
+  metaDescription?: string;
+  metaKeywords?: string[];
+  metaTitle?: string;
+  name?: string;
+  price?: number;
+  releaseDate?: Date;
+  reviewCount?: number;
+  sizes?: string[];
+  slug?: string;
+  sold?: number;
+  stock?: number;
+  subcategory?: string;
+  tags?: string[];
+  updatedAt?: Date;
+  videos?: string[];
+  weight?: number;
+  width?: number;
+}
